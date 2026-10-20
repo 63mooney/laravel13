@@ -7,12 +7,10 @@ use App\Models\Pelanggan;
 
 class PelangganController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $data['dataPelanggan'] = Pelanggan::all();
+        return view('admin.pelanggan.index', $data);
     }
 
     /**
