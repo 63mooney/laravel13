@@ -16,3 +16,5 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('dashboard', [DashboardController::class, 'index'])
         ->name('dashboard');
+
+Route::resource('pelanggan', \App\Http\Controllers\PelangganController::class);
