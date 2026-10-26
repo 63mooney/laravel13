@@ -287,7 +287,7 @@
                 <div class="card border-0 shadow components-section">
                     <div class="card-body">
                         <form action="{{ route('pelanggan.update', $dataPelanggan->pelanggan_id) }}" method="POST">
-                            @csrf
+                            @csrf @method('PUT')
                             <div class="row mb-4">
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- First Name -->
@@ -315,8 +315,8 @@
                                         <label for="gender" class="form-label">Gender</label>
                                         <select id="gender" name="gender" class="form-select mb-0" aria-label="Gender select example">
                                             <option selected>Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                            <option value="Female" value="{{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}">Female</option>
+                                            <option value="Male" value="{{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}">Male</option>
                                         </select>
                                     </div>
                                 </div>
@@ -336,7 +336,7 @@
 
                                     <!-- Buttons -->
                                     <div class="">
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" class="btn btn-info">Simpan Perubahan</button>
                                         <a href="{{ route('pelanggan.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
                                     </div>
                                 </div>
