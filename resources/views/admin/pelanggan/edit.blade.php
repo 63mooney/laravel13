@@ -315,8 +315,8 @@
                                         <label for="gender" class="form-label">Gender</label>
                                         <select id="gender" name="gender" class="form-select mb-0" aria-label="Gender select example">
                                             <option selected>Gender</option>
-                                            <option value="Female" value="{{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}">Female</option>
-                                            <option value="Male" value="{{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}">Male</option>
+                                            <option value="Female" {{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}>Female</option>
+                                            <option value="Male" {{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}>Male</option>
                                         </select>
                                     </div>
                                 </div>
